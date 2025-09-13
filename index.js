@@ -202,3 +202,52 @@ allPlants();
 
 
 
+// All chetagory // add cart :
+let totalPrice = 0;
+
+const ourBtn = (id) => {
+    fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
+    .then(res => res.json())
+    .then(data => {
+      
+      displayOurBtn(data.plants)
+      
+    })
+}
+
+const displayOurBtn = (btn) => {
+  
+  alert(`${btn.name}  Added On Your Cart`)
+
+  const prent = document.getElementById('chetaory')
+  // prent.innerHTML = "";
+  
+    
+      
+        const div = document.createElement('div')
+      div.innerHTML = `
+        <div class="flex justify-between items-center space-y-2 p-6 mb-3">
+                  <div>
+                    <p class="text-2xl font-semibold">${btn.name}</p>
+                    <p  class="text-2xl mt-4"><i class="fa-solid fa-bangladeshi-taka-sign"></i> ${btn.price}</p>
+                  </div>
+                    <div>
+                      <p class="remove-btn text-red-500 font-bold"><i class="fa-solid fa-xmark"></i></p>
+                    </div>
+                    
+                </div> 
+                
+      `;
+      prent.appendChild(div);
+  
+  // total calculate
+   totalPrice += parseFloat(btn.price);  
+  updateTotalPrice();
+
+  // remove button workthrow 
+    div.querySelector('.remove-btn').addEventListener('click', () => {
+      prent.removeChild(div);
+      totalPrice -= parseFloat(btn.price);  // then remove there price 
+      updateTotalPrice();   // current price show korbe
+  });
+}
