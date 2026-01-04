@@ -1,169 +1,61 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-006
+1) What is the difference between var, let, and const?
 
-### 📅 Deadline For 60 marks: 9th September, 2025 (11:59 pm ⏱️)
+var :
+It is function-scoped , it can acessable for any where into function scop,
+and it is redeclareable, there hosting area is any where means var can declare to the one place then we can call it to the upper place there provided output is  output is undefine.
 
-### 📅 Deadline For 50 marks : 13th September , 2025 (6:00 pm⏱️)
+let :
+It is block-scoped means dose not work outer side the block, redeclareable not possible, but declare is possible into the same block, hosting is possible but there habe temporal dead zone so, let declare section to the upper section to cal that the function output then output showed the error.
 
-### 📅 Deadline For 30 marks: Any time after 13the September , 2025 (6:01 pm⏱️).
+const :
+It is block-scoped and do not redeclareable and assingable , primitive values like number and string is always constant, but object and array there value is changing possible, 
 
----
-# Green Earth
 
+2) What is the difference between map(), forEach(), and filter()?
 
-## Private Repository: https://classroom.github.com/a/nVZrg5R9 
+map :
+work on the each element and return the new array, there output is new array,
+declareation example: let doubled = nums.map(n => n * 2);
 
-## Alternative Private Repository: https://classroom.github.com/a/KCGI14ST 
+filter :
+if condition is true then return the group of matching element into a array
+declareation example: let evens = nums.filter(n => n % 2 === 0);
 
-## Alternative Private Repository: https://classroom.github.com/a/JMuIYqgK 
+forEach  :
+ working process like - looping on the each element but do not return the value it is printing the looped value, there returnt value is undefined,
+ declareation example: nums.forEach(n => console.log(n * 2));
 
 
----
-🌴 API Endpoints
----
-1. Get 🌴All Plants
-```bash
-https://openapi.programming-hero.com/api/plants
-```
+ 3) What are arrow functions in ES6?
+ It is sorted syntext function of ES6 , using for shorted-code and clean code structured, do not binding there owun (this) code, it collect/useing there parent-scope (this)
+ declareation example: const addArrow = (a, b) => a + b;
 
-2. Get 🌴All categories <br/>
-```bash
-https://openapi.programming-hero.com/api/categories
-```
 
+ 4) How does destructuring assignment work in ES6?
+ Destructuring it can do distroyed the array/object values and saparete it then assing it into the another variable.
 
-3. Get 🌴plants by categories <br/>
-```bash
-https://openapi.programming-hero.com/api/category/${id}
-```
+ declareation example:   
+    
+    * array destructuring -
+    const numbers = [10, 20, 30];
+    const [a, b, c] = numbers;
 
-```bash
-https://openapi.programming-hero.com/api/category/1
-```
+    * object destructuring -
+    const person = {name: 'Alamin' , age: 20};
+    const {name, age} =  person; 
 
-4. Get 🌴Plants Detail <br/>
 
-```bash
-https://openapi.programming-hero.com/api/plant/${id}
-```
+5) Explain template literals in ES6. How are they different from string concatenation?
+Template literals -  means using the backtick `` ,  advantage is writing possible multiple line string, and using this &{} for declare the variable or exprassion.
 
-```bash
-https://openapi.programming-hero.com/api/plant/1
-```
----
+declareation example: let msg = `Hello ${name}, welcome!`;
 
 
 
 
-## ✅ Main Requirements 
 
-#### 1) Navbar
 
-- Website **logo/name** on the **left**  
-- **Menu items** in the **center** 
-- **Plant a Tree button** on the **right** 
 
-#### 2) Banner 
-- A **background image**  
-- A **title** and **subtitle**  
-- A **centered button**  
 
-#### 3) About Campaign
-- **Section heading**  
-- **Image on the left**, **text on the right**  
 
-#### 4) Our Impact Section 
-- Show **3 cards** with campaign **statistics**  
 
-#### 5) Plant a Tree Today Section & Footer
-- **Form**: Name, Email, Number of Trees  
-- **Footer** with copyright info 
-
-#### 6) Responsiveness 
-- Website must be **mobile responsive**  
-
----
-#### 7) Create a README file to answer the following question-
-
-
-#### 1) What is the difference between var, let, and const?
-
-#### 2) What is the difference between map(), forEach(), and filter()? 
-
-#### 3) What are arrow functions in ES6?
-
-#### 4) How does destructuring assignment work in ES6?
-
-#### 5) Explain template literals in ES6. How are they different from string concatenation?
-
-## ⚙️ Functionalities 
-
-1) Category Loading 
-Load Tree Categories dynamically on the left side.
-
-2) Category Click → Tree Data 
-On clicking a category: load trees of that category.
-
-Display in a 3-column card layout.
-
-3) Card Contents 
- Each card includes:
-
-        - Image
-
-        -  Name
-
-        - Short description
-
-        - Category
-
-        - Price
-
-        - Add to Cart button
-
-4) Modal on Card Click 
-Clicking a tree name on a card opens a modal with full tree details.
-
-
-##  🧪 Challenges 
-
-
-    1) Add to Cart 
-    Clicking Add to Cart: - Adds the tree to Cart List
-                          - Shows tree name 
-
-    2) Total Calculation 
-    Calculate total price of trees in cart.
-
-    3) Remove from Cart 
-    Clicking ❌ removes tree and deducts price from total.
-
-    4) Loading Spinner
-    Show spinner while data is loading.
-
-    5) Active Button State 
-    Highlight active category button when selected.
-
-
-
-🧰 Technology Stack:
-        
-        HTML
-
-        CSS (Vanilla / Tailwind / DaisyUI)
-
-        JavaScript (Vanilla only, no frameworks)
-
-📌 Rules
-✅ At least 5 meaningful commits
-
-❌ No dummy text or Lorem Ipsum — must use relevant content
-
-
-
-
-
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
-
----
